@@ -1,11 +1,11 @@
 package bootcamp.services;
 
-import bootcamp.dao.LookupDao;
+import bootcamp.dao.LookUpDao;
 import bootcamp.model.Location;
 
 public class LookUpServices {
 	
-	private LookupDao lookupdao = new LookupDao();
+	private LookUpDao lookupdao = new LookUpDao();
 	
 	public Location getLocationByName(String name) {
 		return lookupdao.getLocationByName(name);
@@ -13,5 +13,9 @@ public class LookUpServices {
 
 	public void createNewLocation(String name) {
 		lookupdao.createNewLocation(name);
+	}
+
+	public LookUpDao getLookupdao() {
+		return lookupdao;
 	}
 }
